@@ -1,0 +1,22 @@
+name = "Simple Artillery Computer"
+author = "Krzyciu"
+prefix = "krzycac"
+mainprefix = "z"
+
+[files]
+include = [
+    "mod.cpp",
+    "README.md",
+    "LICENSE",
+    "meta.cpp",
+]
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3
+    "463939057", # ACE3
+]
+parameters = [
+    "-name=dev",
+    "-window",
+]

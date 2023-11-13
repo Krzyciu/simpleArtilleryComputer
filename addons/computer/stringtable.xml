@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="simpleArtilleryComputer">
+  <Package name="artilleryComputer">
+    <Key ID="STR_krzycac_computer_computer">
+      <English>Simple Artillery Computer</English>
+      <Polish>Uproszczony Komputer Artyleryjski</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_Action_OpenComputer">
+      <English>Open Artillery Computer</English>
+      <Polish>Otwórz Komputer Artyleryjski</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_mainName">
+      <English>Artillery Computer</English>
+      <Polish>Komputer Artyleryjski</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_ownGrid">
+      <English>Own Position</English>
+      <Polish>Pozycja Własna</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_ownGrid_tooltip">
+      <English>Own grid - at least 6 numbes e.g. xxx-yyy</English>
+      <Polish>Koordynaty pozycji własnej - przynajmniej 6 cyfrowe. Np. xxx-yyy.</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_ownGridX_tooltip">
+      <English>Own X coordinates</English>
+      <Polish>Koordynat X własny</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_ownGridY_tooltip">
+      <English>Own Y coordinates</English>
+      <Polish>Koordynat Y własny</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetGrid">
+      <English>Target Position</English>
+      <Polish>Pozycja Celu</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetGrid_tooltip">
+      <English>Target grid - at least 6 numbes e.g. xxx-yyy</English>
+      <Polish>Koordynaty pozycji celu - przynajmniej 6 cyfrowe. Np. xxx-yyy.</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetGridX_tooltip">
+      <English>Target X coordinates</English>
+      <Polish>Koordynat X celu</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetGridY_tooltip">
+      <English>Target Y coordinates</English>
+      <Polish>Koordynat Y celu</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetDir_tooltip">
+      <English>Calculated direction to target (in mils)</English>
+      <Polish>Wyliczony kierunek do celu (w milsach)</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetDist_tooltip">
+      <English>Calculated distance to target (in meters)</English>
+      <Polish>Wyliczony dystans do celu (w metrach)</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetElev_tooltip">
+      <English>Calculated gun elevation (in mils)</English>
+      <Polish>Wyliczona elewacja działa (w milsach)</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_buttonApply">
+      <English>Calculate</English>
+      <Polish>Wylicz</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_buttonApply_tooltip">
+      <English>Calculates distance, direction to target and gun elevation.</English>
+      <Polish>Oblicza dystans oraz kierunek do celu, a także elewację.</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_closeButtonTooltip">
+      <English>Closes computer and saves input data</English>
+      <Polish>Zamyka komputer i zapisuje wpisane dane</Polish>
+    </Key>
+     <Key ID="STR_krzycac_computer_artilleryComputer_buttonConnect_tooltip">
+      <English>Allows to import own position data from GPS/ACE MicroDagr</English>
+      <Polish>Pozwala pobrać własną pozycję z GPS/ACE MicroDagr</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_descriptionShort">
+      <English>Allows to use artillery computer</English>
+      <Polish>Pozwala na użycie komputera artyleryjskiego</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_wrongOwnGrid">
+      <English>[A4ES] Wrong own grid coordinates</English>
+      <Polish>[A4ES] Błędne koordynaty własne</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_wrongTargetGrid">
+      <English>[A4ES] Wrong target grid coordinates</English>
+      <Polish>[A4ES] Błędne koordynaty celu</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_wrongElevation">
+      <English>[A4ES] Calculated elevation is out of range for selected charge</English>
+      <Polish>[A4ES] Wyliczona elewacja nie mieści się w zasięgu dla wybranego charga</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_wrongDistance">
+      <English>[A4ES] Calculated distance is out of range for selected gun</English>
+      <Polish>[A4ES] Wyliczona odległość nie mieści się w zasięgu wybranego działa</Polish>
+    </Key>
+    <Key ID="STR_krzycac_computer_noGPS">
+      <English>[A4ES] No device with acces to GPS in equipment</English>
+      <Polish>[A4ES] Brak urządzenia z dostępem do GPS w ekwipunku</Polish>
+    </Key>
+  </Package>
+</Project>
