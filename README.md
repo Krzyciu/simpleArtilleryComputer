@@ -22,11 +22,18 @@ However playing with disabled artillery computer makes artillery support way slo
 Here is where <b>Simple Artillery Computer</b> comes into play. 
 
 # Usage
-- Press "P" button to open dialog - Changable in addon's control options under [Simple Artillery Computer].
-- Select range to target - Drop-down list on left.
+- To open computer, player must have <b>Artillery Computer</b> item in equipment.
+- Press "P" or use ACE Self-Interaction to open dialog - button changable in addon's control options under [Simple Artillery Computer].
+- Select range to target - drop-down list on left, range is based on selected charge.
 - Enter own position - Grid reference, at least xxx-yyy grid is required - center position of grid will be taken. Up to 10 digits grid reference is supported (1m precision)
-- Enter target position - same as above.
-- Click "Calculate" button - Computer will show gun elevation, distance and direction to target. Elevation and direction is show in mils. If any of input parameters is not suitable, error on systemChat will be thrown.
+- (Optional) If player has GPS or ACE Microdagr in equipment, it's possible to get own position through "GPS" button click.
+- Enter target position - same as enter own position.
+- Click "Calculate" button - Computer will fill gun elevation, distance and direction to target. Elevation and direction is show in [mils](https://en.wikipedia.org/wiki/Milliradian). If any of input parameters is not suitable, error on systemChat will be thrown.
+
+Key-notes:
+- Terrain elevation is taken into account during calculation. No need to manually add correction.
+- All data - both input and output is saved on display closure.
+- It's advised to make sure that gunner selected proper charge on gun.
 
 ## Requirements
 Newest versions of:
