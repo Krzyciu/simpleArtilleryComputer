@@ -21,7 +21,7 @@ Default Arma 3 artillery computer is not suitable for milsim-coop gameplay as it
 However playing with disabled artillery computer makes artillery support way slower, especially when manned by unexperienced player.</br>
 Here is where <b>Simple Artillery Computer</b> comes into play. 
 
-# Usage
+## Usage
 - To open computer, player must have <b>Artillery Computer</b> item in equipment.
 - Press "P" or use ACE Self-Interaction to open dialog - button changable in addon's control options under [Simple Artillery Computer].
 - Select range to target - drop-down list on left, range is based on selected charge.
@@ -30,7 +30,7 @@ Here is where <b>Simple Artillery Computer</b> comes into play.
 - Enter target position - same as enter own position.
 - Click "Calculate" button - Computer will fill gun elevation, distance and direction to target. Elevation and direction is show in [mils](https://en.wikipedia.org/wiki/Milliradian). If any of input parameters is not suitable, error on systemChat will be thrown.
 
-Key-notes:
+## Key-notes:
 - Terrain elevation is taken into account during calculation. No need to manually add correction.
 - All data - both input and output is saved on display closure.
 - It's advised to make sure that gunner selected proper charge on gun.
