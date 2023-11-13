@@ -19,7 +19,10 @@
 # Simple Artillery Computer
 Default Arma 3 artillery computer is not suitable for milsim-coop gameplay as it's point&click nature seems to be way too unrealistic.</br>
 However playing with disabled artillery computer makes artillery support way slower, especially when manned by unexperienced player.</br>
-Here is where <b>Simple Artillery Computer</b> comes into play. 
+Here is where <b>Simple Artillery Computer</b> comes into play.
+<p align="center">
+    <img src="https://i.imgur.com/UAPPV9d.png" width="1920">
+</p>
 
 ## Usage
 - To open computer, player must have <b>Artillery Computer</b> item in equipment.
