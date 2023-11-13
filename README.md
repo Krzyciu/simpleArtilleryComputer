@@ -44,4 +44,4 @@ Newest versions of:
 Scripts and addons macros are based on [ACE3](https://github.com/acemod/ACE3) and [CBA](https://github.com/CBATeam/CBA_A3) projects.  
 
 ## License
-[GPL 3.0](https://github.com/Krzyciu/simpleArtilleryComputer/blob/main/LICENSE)
+Simple Artillery Computer is licensed under the GNU General Public License [GPL 3.0](https://github.com/Krzyciu/simpleArtilleryComputer/blob/main/LICENSE)
