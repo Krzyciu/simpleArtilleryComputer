@@ -251,7 +251,7 @@ class GVAR(artilleryComputer) {
 			x = QUOTE(4 * GUI_GRID_W + GUI_GRID_CENTER_X);
 			y = QUOTE(3 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(14 * GUI_GRID_W);
-			h = QUOTE(5 * GUI_GRID_H);
+			h = QUOTE(12 * GUI_GRID_H);
 		
 			onLBSelChanged = QUOTE(playSound 'click');
 		};

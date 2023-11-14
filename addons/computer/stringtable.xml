@@ -78,24 +78,24 @@
       <Polish>Pozwala na użycie komputera artyleryjskiego</Polish>
     </Key>
     <Key ID="STR_krzycac_computer_wrongOwnGrid">
-      <English>[A4ES] Wrong own grid coordinates</English>
-      <Polish>[A4ES] Błędne koordynaty własne</Polish>
+      <English>Wrong own grid coordinates</English>
+      <Polish>Błędne koordynaty własne</Polish>
     </Key>
     <Key ID="STR_krzycac_computer_wrongTargetGrid">
-      <English>[A4ES] Wrong target grid coordinates</English>
-      <Polish>[A4ES] Błędne koordynaty celu</Polish>
+      <English>Wrong target grid coordinates</English>
+      <Polish>Błędne koordynaty celu</Polish>
     </Key>
     <Key ID="STR_krzycac_computer_wrongElevation">
-      <English>[A4ES] Calculated elevation is out of range for selected charge</English>
-      <Polish>[A4ES] Wyliczona elewacja nie mieści się w zasięgu dla wybranego charga</Polish>
+      <English>Calculated elevation is out of range for selected charge</English>
+      <Polish>Wyliczona elewacja nie mieści się w zasięgu dla wybranego charga</Polish>
     </Key>
     <Key ID="STR_krzycac_computer_wrongDistance">
-      <English>[A4ES] Calculated distance is out of range for selected gun</English>
-      <Polish>[A4ES] Wyliczona odległość nie mieści się w zasięgu wybranego działa</Polish>
+      <English>Calculated distance is out of range for selected gun</English>
+      <Polish>Wyliczona odległość nie mieści się w zasięgu wybranego działa</Polish>
     </Key>
     <Key ID="STR_krzycac_computer_noGPS">
-      <English>[A4ES] No device with acces to GPS in equipment</English>
-      <Polish>[A4ES] Brak urządzenia z dostępem do GPS w ekwipunku</Polish>
+      <English>No device with acces to GPS in equipment</English>
+      <Polish>Brak urządzenia z dostępem do GPS w ekwipunku</Polish>
     </Key>
   </Package>
 </Project>
