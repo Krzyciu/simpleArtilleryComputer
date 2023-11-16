@@ -4,7 +4,7 @@
  * Gets own position if GPS/MicroDagr present in equipment.
 */
 
-if (([ace_player, "GPS"] call ace_common_fnc_hasItem) || {[ace_player, "ACE_microDAGR"] call ace_common_fnc_hasItem}) then {
+if (([ace_player, "ItemGPS"] call ace_common_fnc_hasItem) || {[ace_player, "ACE_microDAGR"] call ace_common_fnc_hasItem}) then {
   
   private _pos = [getPos player] call ace_common_fnc_getMapGridFromPos;
   private _easting = _pos #0;
