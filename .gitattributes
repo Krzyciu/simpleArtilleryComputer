@@ -1,0 +1,2 @@
+addons/**/*.cpp linguist-language=SQF
+addons/**/*.hpp linguist-language=SQF
