@@ -3,8 +3,8 @@
 params ["_display"];
 private _ctrlChargeList = _display displayCtrl IDC_CHARGE_LIST;
 
-private _data = ace_player getVariable [QGVAR(computerData), ["000", "000", "000", "000", "", "", "", 0]];
-_data params ["_xOwn", "_yOwn", "_xTarget", "_yTarget", "_dir", "_dis", "_elev", "_charge"];
+private _data = ace_player getVariable [QGVAR(computerData), ["000", "000", "000", "000", "", "", "", 0, ""]];
+_data params ["_xOwn", "_yOwn", "_xTarget", "_yTarget", "_dir", "_dis", "_elev", "_charge", "_tof"];
 
 {
   [_x, _ctrlChargeList] call FUNC(addNewWeapon);
@@ -17,4 +17,5 @@ _data params ["_xOwn", "_yOwn", "_xTarget", "_yTarget", "_dir", "_dis", "_elev",
 (_display displayCtrl IDC_TARGETDIR) ctrlSetText _dir;
 (_display displayCtrl IDC_TARGETDIST) ctrlSetText _dis;
 (_display displayCtrl IDC_TARGETELEV) ctrlSetText _elev;
-GVAR(lastCharge) = lbCurSel _ctrlChargeList;
+(_display displayCtrl IDC_TARGETTOF) ctrlSetText _tof;
+_ctrlChargeList lbSetCurSel _charge;

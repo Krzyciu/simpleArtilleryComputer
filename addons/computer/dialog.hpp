@@ -208,6 +208,19 @@ class GVAR(artilleryComputer) {
 			tooltipColorShade[] = {0,0,0,0};
 		};
 
+		class GVAR(targetTOF): RscText {
+			x = QUOTE(22 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(2 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			
+			text = QUOTE(TOF);
+			tooltip = CSTRING(artilleryComputer_targetTOF_tooltip);
+			tooltipColorText[] = {0.543, 0.5742, 0.4102, 1.0};
+			tooltipColorBox[] = {1,1,1,0};
+			tooltipColorShade[] = {0,0,0,0};
+		};
+
 		class GVAR(editTargetDir): RscEdit {
 			idc = IDC_TARGETDIR;
 			maxChars = 4;
@@ -232,6 +245,15 @@ class GVAR(artilleryComputer) {
 
 			x = QUOTE(24 * GUI_GRID_W + GUI_GRID_CENTER_X);
 			y = QUOTE(14 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(3 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+		};
+
+		class GVAR(editTargetTOF): RscEdit {
+			idc = IDC_TARGETTOF;
+
+			x = QUOTE(24 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 		};
@@ -262,8 +284,15 @@ class GVAR(artilleryComputer) {
 			y = QUOTE(19 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3.2 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
-
+			
 			text = CSTRING(artilleryComputer_buttonApply);
+			colorDisabled[] = {0, 0, 0, 0  };
+			colorBackground[] = {0, 0, 0, 0 };
+			colorBackgroundDisabled[] = {0, 0, 0, 0 };
+			colorBackgroundActive[] = {0, 0, 0, 0 };
+			colorFocused[] = {0, 0, 0, 0 };
+			colorShadow[] = {0, 0, 0, 0 };
+			colorBorder[] = {0, 0, 0, 0 };
 			tooltip = CSTRING(artilleryComputer_buttonApply_tooltip);
 			tooltipColorText[] = {0.543, 0.5742, 0.4102, 1.0};
 			tooltipColorBox[] = {1,1,1,0};
@@ -293,6 +322,7 @@ class GVAR(artilleryComputer) {
 			y = QUOTE(19 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
+			
 			access = 0;
 			type = 1;
 			text = "";

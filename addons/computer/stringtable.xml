@@ -57,6 +57,10 @@
       <English>Calculated gun elevation (in mils)</English>
       <Polish>Wyliczona elewacja działa (w milsach)</Polish>
     </Key>
+    <Key ID="STR_krzycac_computer_artilleryComputer_targetTOF_tooltip">
+      <English>Time of Flight (in seconds)</English>
+      <Polish>Czas lotu pocisku (w sekundach)</Polish>
+    </Key>
     <Key ID="STR_krzycac_computer_artilleryComputer_buttonApply">
       <English>Calculate</English>
       <Polish>Wylicz</Polish>

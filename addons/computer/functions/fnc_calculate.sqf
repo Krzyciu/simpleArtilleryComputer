@@ -31,6 +31,10 @@ private _distance = round (_realPosOwn distance2d _realPosTarget);
 
 if (_distance > _maxRange || _distance < _minRange) exitWith {
   systemChat LLSTRING(wrongDistance);
+  (_display displayCtrl IDC_TARGETDIR) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETDIST) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETELEV) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETTOF) ctrlSetText "0";
 };
 
 private _zOwn = getTerrainHeightASL _realPosOwn;
@@ -44,9 +48,15 @@ private _elev = (atan((_finalVel^2+sqrt(_finalVel^4-GRAVITY*(GRAVITY*(_distance^
 
 if (_elev > _maxElev || _elev < _minElev) exitWith {
   systemChat LLSTRING(wrongElevation);
+  (_display displayCtrl IDC_TARGETDIR) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETDIST) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETELEV) ctrlSetText "0";
+  (_display displayCtrl IDC_TARGETTOF) ctrlSetText "0";
 };
+private _tof = round ((2*_finalVel*sin(_elev))/GRAVITY);
 
 _elev = _elev * DEGTOMILS;
 _elev = round _elev;
 
 (_display displayCtrl IDC_TARGETELEV) ctrlSetText str _elev;
+(_display displayCtrl IDC_TARGETTOF) ctrlSetText str _tof;
