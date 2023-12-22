@@ -31,7 +31,7 @@ Here is where <b>Simple Artillery Computer</b> comes into play.
 - Enter own position - Grid reference, at least xxx-yyy grid is required - center position of grid will be taken. Up to 10 digits grid reference is supported (1m precision)
 - (Optional) If player has GPS or ACE Microdagr in equipment, it's possible to get own position through "GPS" button click.
 - Enter target position - same as enter own position.
-- Click "Calculate" button - Computer will fill gun elevation, distance and direction to target. Elevation and direction is show in [mils](https://en.wikipedia.org/wiki/Milliradian). If any of input parameters is not suitable, error on systemChat will be thrown.
+- Click "Calculate" button - Computer will fill gun elevation, distance and direction to target along with time of flight. Elevation and direction is shown in [mils](https://en.wikipedia.org/wiki/Milliradian). If any of input parameters is not suitable, error on chat will show up.
 
 ## Key-notes:
 - Terrain elevation is taken into account during calculation. No need to manually add correction.
