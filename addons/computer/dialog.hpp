@@ -4,6 +4,7 @@ class RscListBox;
 class RscText;
 class RscTitle;
 class RscPicture;
+class RscToolbox;
 
 class GVAR(artilleryComputer) {
 	idd = IDC_ARTILLERYCOMPUTER;
@@ -44,9 +45,9 @@ class GVAR(artilleryComputer) {
 	class controls {
 		class Background: RscText {
 			x = 0;
-			y = 0;
+			y = -0.05;
 			w = 1;
-			h = 1;
+			h = 1.04;
 			
 			colorBackground[] = {0.15, 0.15, 0.15, 1};
 		};
@@ -79,7 +80,7 @@ class GVAR(artilleryComputer) {
 		
 		class GVAR(ownGridY): RscText {
 			x = QUOTE(23 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(6 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			y = QUOTE(5.75 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(2 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 			
@@ -105,7 +106,7 @@ class GVAR(artilleryComputer) {
 
 			maxChars = 5;
 			x = QUOTE(24 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(6 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			y = QUOTE(5.75 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 		};
@@ -138,7 +139,7 @@ class GVAR(artilleryComputer) {
 
 		class GVAR(targetGridY): RscText {
 			x = QUOTE(29 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(6 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			y = QUOTE(5.75 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(2 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 			
@@ -164,7 +165,7 @@ class GVAR(artilleryComputer) {
 
 			maxChars = 5;
 			x = QUOTE(30 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(6 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			y = QUOTE(5.75 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 		};
@@ -274,6 +275,8 @@ class GVAR(artilleryComputer) {
 			y = QUOTE(3 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(14 * GUI_GRID_W);
 			h = QUOTE(12 * GUI_GRID_H);
+			colorSelectBackground[] = {0.7,0.6,0,1};
+			colorSelectBackground2[] = {0.7,0.6,0,1};
 		
 			onLBSelChanged = QUOTE(playSound 'click');
 		};
@@ -287,7 +290,7 @@ class GVAR(artilleryComputer) {
 			
 			text = CSTRING(artilleryComputer_buttonApply);
 			colorDisabled[] = {0, 0, 0, 0  };
-			colorBackground[] = {0, 0, 0, 0 };
+			colorBackground[] = {0.1,0.1,0.1,1};
 			colorBackgroundDisabled[] = {0, 0, 0, 0 };
 			colorBackgroundActive[] = {0, 0, 0, 0 };
 			colorFocused[] = {0, 0, 0, 0 };
@@ -318,8 +321,8 @@ class GVAR(artilleryComputer) {
 
 		class GVAR(connectToDagr): RscButton {
 			idc = IDC_BUTTON_CONNECT;
-			x = QUOTE(10 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(19 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			x = QUOTE(8 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 			
@@ -339,8 +342,8 @@ class GVAR(artilleryComputer) {
 		};
 
 		class GVAR(connectText): RscText {
-			x = QUOTE(8 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(19 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			x = QUOTE(6 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(3 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 			
@@ -352,11 +355,120 @@ class GVAR(artilleryComputer) {
 		};
 
 		class GVAR(connectPicture): RscPicture {
-			x = QUOTE(10 * GUI_GRID_W + GUI_GRID_CENTER_X);
-			y = QUOTE(19 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			x = QUOTE(8 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
 			w = QUOTE(1 * GUI_GRID_W);
 			h = QUOTE(1 * GUI_GRID_H);
 			text = QUOTE(\a3\ui_f\data\igui\cfg\simpletasks\types\move_ca.paa);
 		};
+
+		class GVAR(angle): RscToolbox {
+            idc = IDC_ANGLE;
+            x = QUOTE(4 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(0.7 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(5 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+
+			checked_strings[] = {"LOW","HIGH"};
+			rows = 1;
+			values[] = {-1, 1};
+			colorDisable[] = {1,1,1,1};
+			colorBackground[] = {0.1,0.1,0.1,1};
+			colorSelectedBg[] = {0.7,0.6,0,1};
+			colorTextSelect[] = {1,1,1,1};
+			colorTextDisable[] = {1,1,1,1};
+        };
+
+		class GVAR(grid): RscToolbox {
+            idc = IDC_GRID;
+            x = QUOTE(28 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(17.25 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(7 * GUI_GRID_W);
+			h = QUOTE(7 * GUI_GRID_H);
+			rows = 3;
+			columns = 3;
+
+			strings[] = {"7", "8", "9", "4", "5", "6", "1", "2", "3"};
+			values[] = {7, 8, 9, 4, 5, 6, 1, 2, 3};
+			colorDisable[] = {1,1,1,1};
+			colorBackground[] = {0.1,0.1,0.1,1};
+			colorSelectedBg[] = {0.7,0.6,0,1};
+			colorTextDisable[] = {1,1,1,1};
+			colorTextSelect[] = {1,1,1,1};
+        };
+		/*
+		class GVAR(savePicture): RscPicture {
+			x = QUOTE(29.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(13 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(1 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			text = QUOTE(\a3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_saveas_ca.paa);
+		};
+
+		class GVAR(saveButton): RscButton {
+			idc = IDC_BUTTON_SAVE;
+			x = QUOTE(29.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(13 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(3 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			
+			access = 0;
+			type = 1;
+			text = "";
+			colorText[] = {0, 0, 0, 0 };
+			colorDisabled[] = {0, 0, 0, 0  };
+			colorBackground[] = {0, 0, 0, 0 };
+			colorBackgroundDisabled[] = {0, 0, 0, 0 };
+			colorBackgroundActive[] = {0, 0, 0, 0 };
+			colorFocused[] = {0, 0, 0, 0 };
+			colorShadow[] = {0, 0, 0, 0 };
+			colorBorder[] = {0, 0, 0, 0 };
+			
+			onButtonClick = QUOTE(playSound 'click'; 0 call FUNC(savePosition));
+		};
+
+		class GVAR(restoreText): RscText {
+			x = QUOTE(10 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(4 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			
+			text = QUOTE(Waypoints);
+			tooltip = CSTRING(artilleryComputer_buttonConnect_tooltip);
+			tooltipColorText[] = {0.543, 0.5742, 0.4102, 1.0};
+			tooltipColorBox[] = {1,1,1,0};
+			tooltipColorShade[] = {0,0,0,0};
+		};
+
+		class GVAR(restorePicture): RscPicture {
+			x = QUOTE(13.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(1 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			text = QUOTE(\a3\ui_f\data\igui\cfg\simpletasks\types\search_ca.paa);
+		};
+
+		class GVAR(restoreButton): RscButton {
+			idc = IDC_BUTTON_RESTORE;
+			x = QUOTE(10 * GUI_GRID_W + GUI_GRID_CENTER_X);
+			y = QUOTE(16 * GUI_GRID_H + GUI_GRID_CENTER_Y);
+			w = QUOTE(5 * GUI_GRID_W);
+			h = QUOTE(1 * GUI_GRID_H);
+			
+			access = 0;
+			type = 1;
+			text = "";
+			colorText[] = {0, 0, 0, 0 };
+			colorDisabled[] = {0, 0, 0, 0  };
+			colorBackground[] = {0, 0, 0, 0 };
+			colorBackgroundDisabled[] = {0, 0, 0, 0 };
+			colorBackgroundActive[] = {0, 0, 0, 0 };
+			colorFocused[] = {0, 0, 0, 0 };
+			colorShadow[] = {0, 0, 0, 0 };
+			colorBorder[] = {0, 0, 0, 0 };
+			
+			onButtonClick = QUOTE(playSound 'click'; 0 call FUNC(gpsPosition));
+		};
+		*/
 	};
 };

@@ -9,6 +9,8 @@ private _dir = ctrlText (_display displayCtrl IDC_TARGETDIR);
 private _dis = ctrlText (_display displayCtrl IDC_TARGETDIST);
 private _elev = ctrlText (_display displayCtrl IDC_TARGETELEV);
 private _ctrlChargeList = _display displayCtrl IDC_CHARGE_LIST;
+private _ctrlAngle = _display displayCtrl IDC_ANGLE;
+private _ctrlGrid = _display displayCtrl IDC_GRID;
 GVAR(lastCharge) = lbCurSel _ctrlChargeList;
 (GVAR(magModeData) select GVAR(lastCharge)) params [["_finalVel", 0], ["_minElev", 10], ["_maxElev", 90], ["_minRange", 10], ["_maxRange", 10000]];
 private _gridPosOwn = _xOwn + _yOwn;
@@ -18,6 +20,22 @@ if (typeName _realPosOwn isNotEqualTo "ARRAY") exitWith {
   systemChat LLSTRING(wrongOwnGrid);
 };
 private _zOwn = getTerrainHeightASL _realPosOwn;
+
+private _keypad = lbCurSel _ctrlGrid;
+_keypad = _ctrlGrid lbValue _keypad;
+
+switch (_keypad) do {
+  case 1: {_xTarget = _xTarget + "165";_yTarget = _yTarget + "165";};
+  case 2: {_xTarget = _xTarget + "500";_yTarget = _yTarget + "165";};
+  case 3: {_xTarget = _xTarget + "825";_yTarget = _yTarget + "165";};
+  case 4: {_xTarget = _xTarget + "165";_yTarget = _yTarget + "500";};
+  case 5: {_xTarget = _xTarget + "500";_yTarget = _yTarget + "500";};
+  case 6: {_xTarget = _xTarget + "825";_yTarget = _yTarget + "500";};
+  case 7: {_xTarget = _xTarget + "165";_yTarget = _yTarget + "825";};
+  case 8: {_xTarget = _xTarget + "500";_yTarget = _yTarget + "825";};
+  case 9: {_xTarget = _xTarget + "825";_yTarget = _yTarget + "825";};
+  default {_xTarget = _xTarget + "500";_yTarget = _yTarget + "500";};
+};
 
 private _gridPosTarget = _xTarget + _yTarget;
 private _realPosTarget = [_gridPosTarget] call ace_common_fnc_getMapPosFromGrid;
@@ -44,7 +62,9 @@ private _zdiff = _zTarget - _zOwn;
 (_display displayCtrl IDC_TARGETDIR) ctrlSetText str _azimuth;
 (_display displayCtrl IDC_TARGETDIST) ctrlSetText str _distance;
 
-private _elev = (atan((_finalVel^2+sqrt(_finalVel^4-GRAVITY*(GRAVITY*(_distance^2)+2*_zDiff*_finalVel^2)))/(GRAVITY*_distance)));
+private _angle = lbCurSel _ctrlAngle;
+_angle = _ctrlAngle lbValue _angle;
+private _elev = (atan((_finalVel^2+_angle*sqrt(_finalVel^4-GRAVITY*(GRAVITY*(_distance^2)+2*_zDiff*_finalVel^2)))/(GRAVITY*_distance)));
 
 if (_elev > _maxElev || _elev < _minElev) exitWith {
   systemChat LLSTRING(wrongElevation);
