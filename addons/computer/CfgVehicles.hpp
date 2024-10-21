@@ -8,7 +8,7 @@ class CfgVehicles {
                     condition = QUOTE(0 call FUNC(canUseComputer));
                     statement = QUOTE(_this call FUNC(createDialog));
                     showDisabled = 0;
-                    exceptions[] = {};
+                    exceptions[] = {"isNotInside"};
                     icon = "";
                 };
 			};
