@@ -8,7 +8,7 @@ class RscToolbox;
 
 class GVAR(artilleryComputer) {
 	idd = IDC_ARTILLERYCOMPUTER;
-	name= QGVAR(artilleryComputer);
+	name = QGVAR(artilleryComputer);
 
 	enableSimulation = 1;
 	movingEnable = 0;

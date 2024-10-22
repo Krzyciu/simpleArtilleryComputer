@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror, Krzyciu
+ * Author: PabstMirror, Krzyciu, zharf
  * Find charges of nearby artillery vehicles.
  */
 
